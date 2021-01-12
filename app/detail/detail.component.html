@@ -1,0 +1,21 @@
+
+  <nav>
+    <button mat-raised-button (click)="goBack()">
+      <i class="material-icons">keyboard_arrow_left</i>
+      Back
+    </button>
+  </nav>
+  
+  <app-product 
+    *ngIf="item"
+    [item]="item">
+      <button mat-button (click)="like(item)">
+        LIKE
+      </button>
+      <button mat-button (click)="comment(item)">
+        COMMENT
+      </button>
+      <button mat-button (click)="addToBasket(item)">
+        ADD TO BASKET
+      </button>  
+  </app-product>

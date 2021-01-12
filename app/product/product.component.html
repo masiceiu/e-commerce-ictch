@@ -1,0 +1,28 @@
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <a [routerLink]="['products', item.id]">
+          {{item.name}}
+        </a>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <b>{{item.price}}</b>
+        <i class="material-icons">fiber_manual_record</i>
+        <span>likes: {{item.likes}}</span>
+        <i class="material-icons">fiber_manual_record</i>
+        <span>comments: {{item.comments}}</span>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <div class="picture">
+      <a [routerLink]="['products', item.id]">      
+        <img [src]="item.picture + '?' + item.id">
+      </a>
+    </div>
+    <mat-card-content>
+      <p>{{item.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <ng-content></ng-content>
+    </mat-card-actions>
+  </mat-card>

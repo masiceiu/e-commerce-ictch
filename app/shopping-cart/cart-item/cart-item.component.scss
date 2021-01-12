@@ -1,0 +1,25 @@
+
+img {
+  width: 50%;
+}
+
+mat-card-content {
+  display: flex;
+}
+
+mat-card {
+  max-width: 640px;
+  margin: 0 0 10px 0;
+}
+
+.content {
+  b {
+    display: block;
+    width: 50px;
+  }
+  input {
+    padding: 5px 0 5px 5px;
+    width: 50px;
+    border: 1px solid #eee;
+  }
+}

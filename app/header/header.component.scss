@@ -1,0 +1,17 @@
+
+:host {
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background: #03A9F4;
+  color: #fff;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.home {
+  align-self: center;
+  width: 100px;
+  text-align: center;
+}

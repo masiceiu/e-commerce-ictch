@@ -1,0 +1,23 @@
+
+
+<cl-dossier-create></cl-dossier-create>
+  <!-- dossier-comment-form -->
+
+<ul>
+	<li *ngFor="let comment of comments">
+		<app-comment-item [comment]="comment"></app-comment-item>
+      <!-- <cl-comment-view></cl-comment-view> -->
+      <!-- <cl-comment-edit></cl-comment-edit> -->
+		<ul>
+			<li *ngFor="let reply of comment.replies">
+				<app-comment-item [comment]="reply"></app-comment-item>
+          <!-- <cl-comment-view></cl-comment-view> -->
+          <!-- <cl-comment-edit></cl-comment-edit> -->
+			</li>
+		</ul> 
+		<app-comment-reply *ngIf="comment.uiState.showReply"></app-comment-reply>
+	</li>
+</ul>
+
+
+

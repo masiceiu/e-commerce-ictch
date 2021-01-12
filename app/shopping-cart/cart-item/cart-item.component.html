@@ -1,0 +1,21 @@
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <a [routerLink]="['/products', item.id]">
+        {{item.name}}
+      </a>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="picture">
+      <a [routerLink]="['/products', item.id]">  
+        <img [src]="item.picture + '?' + item.id">
+      </a>
+    </div>
+    <div class="content">
+      <b>{{item.priceTotal}}</b>
+      <input type="number" placeholder="count" [formControl]="count">
+    </div>
+  </mat-card-content>
+</mat-card>

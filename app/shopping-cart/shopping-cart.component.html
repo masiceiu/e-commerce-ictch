@@ -1,0 +1,13 @@
+
+<h2>Shopping Cart</h2>
+
+<ng-container *ngIf="items | async as products">
+  <ng-container *ngIf="products.length; else emptyCart">
+    <app-cart-item 
+      *ngFor="let item of products; trackBy: trackByFn"
+      [item]="item"></app-cart-item>
+  </ng-container>
+  <ng-template #emptyCart>
+    Shopping Cart is empty.
+  </ng-template>
+</ng-container>

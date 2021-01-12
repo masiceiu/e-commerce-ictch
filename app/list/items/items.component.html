@@ -1,0 +1,9 @@
+
+<app-product *ngFor="let item of items; trackBy: trackByFn" [item]="item">
+    <button mat-button (click)="like(item)">
+      LIKE
+    </button>
+    <button mat-button (click)="addToBasket(item)">
+      ADD TO BASKET
+    </button>
+</app-product>

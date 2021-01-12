@@ -1,0 +1,9 @@
+
+<ng-container *ngIf="items | async as items; else spinner">
+  <app-items [items]="items" (rendered)="rendered()"></app-items>
+</ng-container>
+<ng-template #spinner>
+  <div class="loading">
+    products loading...
+  </div>
+</ng-template>
